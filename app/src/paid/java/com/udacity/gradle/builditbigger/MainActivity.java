@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-//        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
         progressBar.setVisibility(View.VISIBLE);
         new EndPointAsyncTask().execute(this);
     }
@@ -75,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
     class EndPointAsyncTask extends AsyncTask<Context, Void, String> {
         private static final String TAG = "EndPointAsyncTask";
         private MyApi myApi = null;
-        @SuppressLint("StaticFieldLeak")
         private Context context;
 
         @Override
